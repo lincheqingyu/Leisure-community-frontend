@@ -1,0 +1,12 @@
+.line {
+    margin-left: 20px;
+}
+
+.line .logo-name {
+    margin-bottom: 5px;
+    font-size: 32px;
+    color: black;
+    letter-spacing: 12px;
+}
+
+/*# sourceMappingURL=Logo.css.map */

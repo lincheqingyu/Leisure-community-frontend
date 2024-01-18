@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Checkbox, Form, Input} from 'antd';
 import { LockOutlined, UserOutlined} from '@ant-design/icons';
 import './Login.scss'
+import Logo from "@/components/Logo/Logo";
 
 const Login = () => {
     const [form] = Form.useForm();
@@ -9,16 +10,14 @@ const Login = () => {
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
     };
+
     return (
         <div className='container'>
             <div className='picture'>
                 <img className='login-picture' src={require('../../assets/images/login.png')} alt="design"/>
             </div>
             <div className='login'>
-                <div className='logo'>
-                    <img className='logo-picture' src={require('../../assets/images/logo.png')} alt="logo"/>
-                    <span className='logo-name'>闲享社群</span>
-                </div>
+                <Logo />
                 <div className='content'>
                     <Form
                         form={form}

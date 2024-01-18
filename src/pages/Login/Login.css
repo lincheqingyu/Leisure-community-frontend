@@ -1,69 +1,70 @@
 @charset "UTF-8";
 .container {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .picture {
-  width: 50vw;
-  height: 100vh;
-  background-color: #CEE6FF;
-  display: flex;
-  align-items: center;
+    width: 50vw;
+    height: 100vh;
+    background-color: #CEE6FF;
+    display: flex;
+    align-items: center;
 }
+
 .picture .login-picture {
-  width: 400px;
-  margin-top: 80px;
-  margin-right: 0;
-  margin-left: auto;
+    width: 400px;
+    margin-top: 80px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 .login {
-  width: 50vw;
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 垂直居中 */
-  justify-content: space-around;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 垂直居中 */
+    justify-content: space-around;
 }
+
 .login .logo {
-  align-self: flex-start; /* 顶部对齐 */
-  margin-top: 10px; /* 边距20 */
-  margin-left: 20px; /* 左对齐 */
-  display: flex;
-  align-items: center;
+    align-self: flex-start; /* 顶部对齐 */
+    margin-top: 10px; /* 边距20 */
+    margin-left: 20px; /* 左对齐 */
+    display: flex;
+    align-items: center;
 }
-.login .logo .logo-name {
-  padding: 20px;
-  font-family: Times, "Times New Roman", Georgia, serif;
-  font-size: 30px;
-  color: black;
-}
+
 .login .content {
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 垂直居中 */
-  text-align: center; /* 水平居中 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 水平居中 */
 }
+
 .login .content .remember-forgot-container {
-  width: 100%;
-  display: flex;
-  align-items: center; /* 垂直居中 */
-  justify-content: space-between; /* 将子元素分散对齐 */
+    width: 100%;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between; /* 将子元素分散对齐 */
 }
+
 .login .content .remember-forgot-container .login-form-forgot {
-  text-align: right; /* 文本右对齐 */
+    text-align: right; /* 文本右对齐 */
 }
+
 .login .content .button {
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 垂直居中 */
-  margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 40px;
 }
+
 .login .content .button .login-form-button {
-  width: 200px;
-  height: 40px;
+    width: 200px;
+    height: 40px;
 }
 
 /*# sourceMappingURL=Login.css.map */

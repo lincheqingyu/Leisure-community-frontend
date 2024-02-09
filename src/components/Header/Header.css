@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  background-color: #A2D0FF;
+  background-position: top;
+  width: 100%;
+  height: 18vh;
+}
+.background .star-1 {
+  position: absolute;
+  transform: translate(-40px, -40px) rotate(-0.01turn);
+}
+.background .star-2 {
+  position: absolute;
+  top: 15vh;
+  left: 8vw;
+  width: 15px;
+  transform: rotate(0.7turn);
+}
+.background .star-3 {
+  position: absolute;
+  top: -2vh;
+  left: 18vw;
+  width: 35px;
+  transform: rotate(0.9turn);
+}
+.background .star-4 {
+  position: absolute;
+  top: -1vh;
+  right: -1vw;
+  width: 55px;
+  transform: rotate(0.55turn);
+}
+.background .star-5 {
+  position: absolute;
+  top: -1vh;
+  right: -1vw;
+  width: 55px;
+  transform: rotate(0.55turn);
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 将子元素分散对齐 */
+  align-items: center;
+  width: 100%;
+  height: 18vh;
+}
+.text .header-menu .ant-menu-item {
+  background-color: #a2d0ff; /* 设置导航项的背景颜色 */
+  font-size: 26px;
+  font-weight: 550;
+}
+.text .header-picture1 {
+  width: 30px;
+  height: 30px;
+}
+.text .header-picture2 {
+  width: 30px;
+  height: 30px;
+}
+.text .header-picture3 {
+  width: 30px;
+  height: 30px;
+}
+.text .menu-link {
+  font-size: 20px;
+  font-family: Arial, serif;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=Header.css.map */

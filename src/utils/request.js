@@ -1,11 +1,12 @@
 //axios的封装处理
 import axios from "axios";
+import {getToken} from "@/utils/token";
 //1.根域名配置
 //2.超时时间
 //3.请求/相应拦截器
 
 const request = axios.create({
-    baseURL: '',    //请求根地址
+    baseURL: 'http://127.0.0.1:4523/m1/3290659-0-default',    //请求根地址
     timeout: 2000,  //超时时间2s
     headers: {'X-Custom-Header': 'foobar'}
 });
@@ -14,6 +15,13 @@ const request = axios.create({
 //在请求发送之前 做拦截，插入一些自定义的配置
 request.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
+    // 操作这个config 注入token数据
+    // 1.获取到token
+    // const token = getToken()
+    // if(token){
+    //
+    // }
+    // 2、按照后端的格式要求做token拼接
     return config;
 }, function (error) {
     // 对请求错误做些什么
@@ -32,4 +40,4 @@ request.interceptors.response.use(function (response) {
     return Promise.reject(error);
 });
 
-export default request
+export {request}

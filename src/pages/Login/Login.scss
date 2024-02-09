@@ -42,13 +42,9 @@
     text-align: center; /* 水平居中 */
 
     .remember-forgot-container {
-      width: 100%;
       display: flex;
-      align-items: center; /* 垂直居中 */
+      flex-direction: row;
       justify-content: space-between; /* 将子元素分散对齐 */
-      .login-form-forgot{
-        text-align: right; /* 文本右对齐 */
-      }
     }
 
     .button {

@@ -1,20 +1,36 @@
 import React from 'react';
-import {Button, Checkbox, Form, Input} from 'antd';
+import {Button, Checkbox, Form, Input, message} from 'antd';
 import { LockOutlined, UserOutlined} from '@ant-design/icons';
 import './Login.scss'
 import Logo from "@/components/Logo/Logo";
+import {useDispatch} from 'react-redux'
+import {fetchLogin} from '@/store/modules/user'
+import {useNavigate} from "react-router-dom";
+
 
 const Login = () => {
     const [form] = Form.useForm();
+
+    const dispatch= useDispatch()
+
+    const navigate = useNavigate()
+
     // 表单成功提交
-    const onFinish = (values) => {
+    const onFinish = async (values) => {
         console.log('Received values of form: ', values);
+        // 触发异步action fetchLogin
+        await dispatch(fetchLogin(values))
+        //1.跳转到首页
+        navigate('/layout')
+        //2.提示用户登陆成功
+        message.success('登陆成功')
+
     };
 
     return (
         <div className='container'>
             <div className='picture'>
-                <img className='login-picture' src={require('../../assets/images/login.png')} alt="design"/>
+                <img className='login-picture' src={require('@/assets/images/login/login.png')} alt="design"/>
             </div>
             <div className='login'>
                 <Logo />
@@ -41,10 +57,10 @@ const Login = () => {
                                     required: true,
                                     message: '请输入您的用户名！',
                                 },
-                                {
-                                    pattern:/^1[3-9]\d{9}$/,//匹配中国大陆地区的手机号
-                                    message:'请输入正确的手机号！'
-                                }
+                                // {
+                                //     pattern:/^1[3-9]\d{9}$/,//匹配中国大陆地区的手机号
+                                //     message:'请输入正确的手机号！'
+                                // }
                             ]}
                         >
                             <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Username"/>
@@ -64,20 +80,17 @@ const Login = () => {
                                 placeholder="Password"
                             />
                         </Form.Item>
-                    </Form>
-                    <Form className='remember-forgot-container'>
-                        <Form.Item name="remember" valuePropName="checked" noStyle>
-                            <Checkbox>保存密码</Checkbox>
-                        </Form.Item>
-
-                        <a className="login-form-forgot" href="">
-                            忘记密码？
-                        </a>
-                    </Form>
-                    <Form className='button'>
-                        <Form.Item >
+                        <div className='remember-forgot-container'>
+                            <Form.Item name="remember" valuePropName="checked" noStyle>
+                                <Checkbox>保存密码</Checkbox>
+                            </Form.Item>
+                            <a className="login-form-forgot" href="https://www.douyin.com/">
+                                忘记密码？
+                            </a>
+                        </div>
+                        <Form.Item className='button'>
                             <Button type="primary" htmlType="submit" className="login-form-button">
-                                登 录
+                                登录
                             </Button>
                         </Form.Item>
                     </Form>
@@ -85,7 +98,7 @@ const Login = () => {
 
                 <div className='link'>
                     <Form.Item>
-                        <a href="">还未拥有账号？点击注册>></a>
+                        <a href="https://www.douyin.com/">还未拥有账号？点击注册>></a>
                     </Form.Item>
                 </div>
             </div>

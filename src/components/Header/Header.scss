@@ -1,0 +1,78 @@
+.container{
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  background-color: #A2D0FF;
+  background-position: top;
+  width: 100%;
+  height: 18vh;
+
+  .star-1 {
+    position: absolute;
+    transform: translate(-40px,-40px) rotate(-0.01turn);
+  }
+  .star-2 {
+    position: absolute;
+    top: 15vh;
+    left: 8vw;
+    width: 15px;
+    transform:rotate(0.7turn);
+  }
+  .star-3 {
+    position: absolute;
+    top: -2vh;
+    left: 18vw;
+    width: 35px;
+    transform:rotate(0.9turn);
+  }
+  .star-4 {
+    position: absolute;
+    top: -1vh;
+    right: -1vw;
+    width: 55px;
+    transform:rotate(0.55turn);
+  }
+  .star-5 {
+    position: absolute;
+    top: -1vh;
+    right: -1vw;
+    width: 55px;
+    transform:rotate(0.55turn);
+  }
+}
+
+.text {
+  //border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  //text-align: center;
+  justify-content: space-between; /* 将子元素分散对齐 */
+  align-items: center;
+  width: 100%;
+  height: 18vh;
+
+  .header-menu .ant-menu-item {
+    background-color: #a2d0ff; /* 设置导航项的背景颜色 */
+    font-size: 26px;
+    font-weight: 550;
+  }
+  .header-picture1 {
+    width: 30px;
+    height: 30px;
+  }
+  .header-picture2 {
+    width: 30px;
+    height: 30px;
+  }
+  .header-picture3 {
+    width: 30px;
+    height: 30px;
+  }
+  .menu-link{
+    font-size: 20px;
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+}

@@ -1,3 +1,67 @@
+@charset "UTF-8";
+.background-container {
+  background-image: url("../../assets/images/register.png"); /* 替换为你的图片路径 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* 设置高度为视窗高度 */
+}
 
+.wrap-contain {
+  height: 85%;
+  display: flex;
+  align-items: center;
+  align-self: flex-end; /* 在交叉轴底部对齐 */
+  width: 50%;
+  margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
+  margin-right: 28%;
+  flex-direction: column;
+}
+
+.welcome {
+  width: 70%;
+  height: 15%;
+  margin-left: 13%;
+  margin-top: 5px;
+}
+
+.center-contain {
+  display: flex;
+  align-items: center;
+  align-self: flex-end; /* 在交叉轴底部对齐 */
+  width: 90%;
+  height: 80%;
+  background-color: rgb(243, 252, 255);
+  margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
+  box-shadow: 20px 3px 10px -5px rgba(167, 207, 236, 0.75);
+}
+
+.shareCommunity {
+  display: flex; /* 设置为弹性容器 */
+  flex-direction: column;
+  position: absolute;
+  top: 31%;
+  padding: 10px;
+  width: 45%;
+  height: 25%;
+}
+
+.shareCommunity img {
+  padding: 10px;
+  width: 45%;
+  height: auto; /* 保持图片宽高比例 */
+}
+
+.shareCommunity a {
+  width: 30%;
+  float: right;
+}
+
+.shareCommunity a p {
+  text-align: right;
+  font-size: 20%;
+  height: auto;
+  width: 50%;
+}
 
 /*# sourceMappingURL=Register.css.map */

@@ -32,10 +32,10 @@ const Header = () => {
                     <div style={{position: 'absolute', bottom: '10px', right: '60px'}}>
                         <Menu mode="horizontal" style={{backgroundColor: 'rgba(255, 255, 255, 0)', border: 'none'}}>
                             <Menu.Item key="first">
-                                <a href='/first' className="menu-link">首页</a>
+                                <a href='/home' className="menu-link">首页</a>
                             </Menu.Item>
                             <Menu.Item key="forum">
-                                <a href='/Forum' className="menu-link">校园论坛</a>
+                                <a href='/forum' className="menu-link">校园论坛</a>
                             </Menu.Item>
                             <Menu.Item key="deal">
                                 <a href='/Deal' className="menu-link">闲置交易</a>

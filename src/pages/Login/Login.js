@@ -84,7 +84,7 @@ const Login = () => {
                             <Form.Item name="remember" valuePropName="checked" noStyle>
                                 <Checkbox>保存密码</Checkbox>
                             </Form.Item>
-                            <a className="login-form-forgot" href="https://www.douyin.com/">
+                            <a className="login-form-forgot" href="/register">
                                 忘记密码？
                             </a>
                         </div>
@@ -98,7 +98,7 @@ const Login = () => {
 
                 <div className='link'>
                     <Form.Item>
-                        <a href="https://www.douyin.com/">还未拥有账号？点击注册>></a>
+                        <a href="/register">还未拥有账号？点击注册>></a>
                     </Form.Item>
                 </div>
             </div>

@@ -4,28 +4,51 @@ import Layout from "../pages/Layout/Layout";
 import {createBrowserRouter} from "react-router-dom";
 import React from "react";
 import Register from "@/pages/Register/Register";
+import Forum from "@/pages/Forum/Forum";
+import FA from "@/pages/Forum/FA/FA";
+import TP from "@/pages/Forum/TP/TP";
 
 //配置路由实例
 
 const router = createBrowserRouter([
     {
+        //登录
         path: '/',
-        element: <Login />
+        element: <Login/>
     },
     {
+        //首页样式
         path: '/layout',
-        element: <Layout />,
-        children:[
+        element: <Layout/>,
+        children: [
             {
-                path:'',
-                element:<></>
+                path: '',
+                element: <></>
             }
         ]
     },
     {
-        path:'/register',
-        element:<Register />
+        //注册
+        path: '/register',
+        element: <Register/>
+    },
+    {
+        //论坛
+        path: '/forum',
+        element: <Forum/>,
+        children: [
+            {
+                path: "FA",
+                element: <FA/>,
+            },
+            {
+                path: "TP",
+                element: <TP/>,
+            },
+        ]
     }
+
+
 ])
 
 export default router

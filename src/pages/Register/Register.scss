@@ -1,26 +1,37 @@
 .background-container{
-    background-image: url('../../assets/images/register.png'); /* 替换为你的图片路径 */
+    background-image: url('../../assets/images/register/pattern.png'); /* 替换为你的图片路径 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #a2d0ff;
     height: 100vh; /* 设置高度为视窗高度 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.pattern{
+    width:100vw;
+}
+.welcome {
+    width: 25%;
+    height: 7%;
+    //margin-left: 13%;
+    margin-top: 5px;
+    border: 1px #181931 solid;
+
 }
 .wrap-contain {
     height: 85%;
     display: flex;
-    align-items: center;
+    text-align: center;
     align-self: flex-end; /* 在交叉轴底部对齐 */
     width: 50%;
     margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
     margin-right: 28%;
     flex-direction: column;
+    border: 1px #181931 solid
 }
-.welcome {
-    width: 70%;
-    height: 15%;
-    margin-left: 13%;
-    margin-top: 5px;
-}
+
 .center-contain {
     display: flex;
     align-items: center;
@@ -36,6 +47,7 @@
 .shareCommunity {
     display: flex; /* 设置为弹性容器 */
     flex-direction: column;
+    //text-align: center;
     position: absolute;
     top: 31%;
     padding: 10px;

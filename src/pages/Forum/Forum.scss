@@ -1,0 +1,33 @@
+.list-one {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    float: left
+}
+
+.list-one a {
+    color: #6F6B6B;
+    padding-right: 70px;
+    display: flex;
+}
+
+.list-one a:hover {
+    color: #0055EE;
+    text-decoration-line: underline;
+    text-underline-offset: 0.8em;
+    transition: all 0.5s;
+}
+
+.borderActive {
+    color: #0055EE !important;
+}
+
+.Search {
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 50%;
+    width: 100px;
+}
+

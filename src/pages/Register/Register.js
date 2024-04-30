@@ -20,14 +20,21 @@ const Register = () => {
         }, [])
     return (
         <div className='background-container'>
-            <div className='wrap-contain'>
+            {/*<img className='pattern' src={require('@/assets/images/register/pattern.png')} alt=''/>*/}
+            <div>
                 <img src={require('@/assets/images/register/welcome.png')}
                      className='welcome'
                      alt=''
                 ></img>
+            </div>
+            <div className='wrap-contain'>
+                {/*<img src={require('@/assets/images/register/welcome.png')}*/}
+                {/*     className='welcome'*/}
+                {/*     alt=''*/}
+                {/*></img>*/}
                 <div className='center-contain'>
                     <div className='shareCommunity'>
-                        <img src={require("@/assets/images/register/Share Community.png")} alt=''></img>
+                        <img className='title' src={require("@/assets/images/register/Share Community.png")} alt=''></img>
                         <div className='content'>
                             <Form
                                 form={form}

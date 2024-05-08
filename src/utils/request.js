@@ -6,7 +6,8 @@ import {getToken} from "@/utils/token";
 //3.请求/相应拦截器
 
 const request = axios.create({
-    baseURL: 'http://127.0.0.1:4523/m1/3290659-0-default',    //请求根地址
+    //baseURL: 'http://127.0.0.1:4523/m1/3290659-0-default',    //请求根地址:Apifox
+    baseURL: 'http://localhost:8080',    //请求根地址:8080
     timeout: 2000,  //超时时间2s
     headers: {'X-Custom-Header': 'foobar'}
 });

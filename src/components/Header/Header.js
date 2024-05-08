@@ -30,10 +30,10 @@ const Header = () => {
                         <Logo/>
                     </div>
                     <div style={{position: 'absolute', bottom: '10px', right: '60px'}}>
-                        <Menu mode="horizontal" style={{backgroundColor: 'rgba(255, 255, 255, 0)', border: 'none'}}>
-                            <Menu.Item key="first">
-                                <a href='/home' className="menu-link">首页</a>
-                            </Menu.Item>
+                        <Menu mode="horizontal" className="menu-horizontal" >
+                            {/*<Menu.Item key="first">*/}
+                            {/*    <a href='/layout' className="menu-link">首页</a>*/}
+                            {/*</Menu.Item>*/}
                             <Menu.Item key="forum">
                                 <a href='/forum' className="menu-link">校园论坛</a>
                             </Menu.Item>

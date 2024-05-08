@@ -1,3 +1,7 @@
+.forum-bk{
+    background-color: #F0F4F7;
+}
+
 .list-one {
     list-style: none;
     display: flex;
@@ -31,3 +35,10 @@
     width: 100px;
 }
 
+.forum-container{
+    background-color: #DCEDFF;
+    //height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* 将子元素分散对齐 */
+}

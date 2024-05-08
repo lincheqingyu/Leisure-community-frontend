@@ -74,4 +74,10 @@
   font-weight: bold;
 }
 
+.menu-horizontal {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  min-width: 500px;
+}
+
 /*# sourceMappingURL=Header.css.map */

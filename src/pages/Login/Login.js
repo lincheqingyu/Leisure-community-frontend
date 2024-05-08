@@ -18,13 +18,17 @@ const Login = () => {
     // 表单成功提交
     const onFinish = async (values) => {
         console.log('Received values of form: ', values);
-        // 触发异步action fetchLogin
-        await dispatch(fetchLogin(values))
-        //1.跳转到首页
-        navigate('/layout')
-        //2.提示用户登陆成功
-        message.success('登陆成功')
-
+        try {
+            // 触发异步action fetchLogin
+            await dispatch(fetchLogin(values));
+            //1.跳转到首页
+            navigate('/layout');
+            //2.提示用户登陆成功
+            message.success('登陆成功');
+        } catch (error) {
+            // 登录失败时的错误处理
+            message.error('用户名或密码错误');
+        }
     };
 
     return (

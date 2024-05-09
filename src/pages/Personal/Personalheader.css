@@ -1,0 +1,31 @@
+.personalheader-all {
+  background-color: #f5fbfd;
+  height: 200px;
+}
+.user-profile {
+  display: flex;
+}
+.avatar img {
+  width: 140px; /* 设置头像宽度 */
+  height: 140px; /* 设置头像高度 */
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.user-info {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.edit-button {
+  margin-top: 80px;
+  margin-left: 1000px;
+}
+.edit-button button {
+  height: 70px;
+  width: 150px;
+  background-color: #72b8ff;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: none;
+}

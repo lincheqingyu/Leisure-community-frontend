@@ -1,6 +1,5 @@
 //路由配置
 import Login from "../pages/Login/Login";
-import Layout from "../pages/Layout/Layout";
 import {createBrowserRouter} from "react-router-dom";
 import React from "react";
 import Register from "@/pages/Register/Register";
@@ -15,17 +14,6 @@ const router = createBrowserRouter([
         //登录
         path: '/',
         element: <Login/>
-    },
-    {
-        //首页样式
-        path: '/layout',
-        element: <Layout/>,
-        children: [
-            {
-                path: '',
-                element: <></>
-            }
-        ]
     },
     {
         //注册

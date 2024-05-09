@@ -22,7 +22,7 @@ const Login = () => {
             // 触发异步action fetchLogin
             await dispatch(fetchLogin(values));
             //1.跳转到首页
-            navigate('/layout');
+            navigate('/forum');
             //2.提示用户登陆成功
             message.success('登陆成功');
         } catch (error) {

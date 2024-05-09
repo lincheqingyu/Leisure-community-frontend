@@ -3,74 +3,70 @@
   background-image: url("../../assets/images/register/pattern.png"); /* 替换为你的图片路径 */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-color: #a2d0ff;
+  background-color: #CEE6FF;
   height: 100vh; /* 设置高度为视窗高度 */
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
 }
 
-.pattern {
-  width: 100vw;
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%;
 }
 
-.welcome {
-  width: 25%;
-  height: 7%;
-  margin-top: 5px;
-  border: 1px #181931 solid;
+.welcome-picture {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: scale(0.8); /* 缩放图片至原始大小的50% */
+  padding: 3% 0;
 }
 
 .wrap-contain {
-  height: 85%;
   display: flex;
   text-align: center;
-  align-self: flex-end; /* 在交叉轴底部对齐 */
-  width: 50%;
-  margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
-  margin-right: 28%;
   flex-direction: column;
-  border: 1px #181931 solid;
-}
-
-.center-contain {
-  display: flex;
-  align-items: center;
-  align-self: flex-end; /* 在交叉轴底部对齐 */
-  width: 90%;
-  height: 80%;
-  background-color: rgb(243, 252, 255);
-  margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
-  box-shadow: 20px 3px 10px -5px rgba(167, 207, 236, 0.75);
+  background-color: #F3FCFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加投影 */
 }
 
 .shareCommunity {
   display: flex; /* 设置为弹性容器 */
   flex-direction: column;
-  position: absolute;
-  top: 31%;
-  padding: 10px;
-  width: 45%;
-  height: 25%;
+}
+
+.content {
+  padding: 5% 8%;
 }
 
 .shareCommunity img {
-  padding: 10px;
+  padding: 20px;
   width: 45%;
   height: auto; /* 保持图片宽高比例 */
 }
 
-.shareCommunity a {
-  width: 30%;
-  float: right;
+.remember-forgot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 将子元素分散对齐 */
 }
 
-.shareCommunity a p {
-  text-align: right;
-  font-size: 20%;
-  height: auto;
-  width: 50%;
+.Verification-code {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  margin-left: 10px;
+}
+
+.text-content {
+  padding-top: 5%;
 }
 
 /*# sourceMappingURL=Register.css.map */

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from '../../style/Header'
+import Header from '../../components/Header/Header'
 import './Shiming.css'
 import Personalheader from './Personalheader'
 import Personalsider from './Personalsider'

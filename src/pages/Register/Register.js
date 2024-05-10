@@ -37,7 +37,7 @@ const Register = () => {
                              alt='闲享社群'/>
                         {/*<a href="/" type="primary">返回登录</a>*/}
                     </div>
-                    <div className='content'>
+                    <div className='register-content'>
                         <Form
                             form={form}
                             name="normal_login"

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.user-container {
+  display: flex;
+  flex-direction: row;
+  height: 24vh; /* 设置高度为页面高度的20% */
+  background-color: #F5FBFD;
+  border: 1px black solid;
+  align-items: center;
+}
+
+.user-container img {
+  margin-left: 5%;
+  max-height: 80%;
+  max-width: 80%;
+  display: block;
+}
+
+.content {
+  border: 1px black solid;
+}
+
+.UserHome-editButton {
+  padding: 5%;
+}
+
+.label {
+  margin-right: 10px; /* 设置 label 和 content 之间的间距 */
+}
+
+.custom-descriptions .custom-item {
+  margin: 0 10px;
+  border: 1px black solid;
+}
+
+/*# sourceMappingURL=UserInfo.css.map */

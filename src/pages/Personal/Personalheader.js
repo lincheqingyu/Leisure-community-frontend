@@ -25,7 +25,7 @@ const Personalheader = () => {
       <div className='user-profile'>
         {/* 左侧头像 */}
         <div className='avatar'>
-          <img src={require('../../assets/images/personalheadlike.png')} alt='用户头像' />
+          <img src={require('../../assets/images/personal/personalheadlike.png')} alt='用户头像' />
         </div>
 
         {/* 中间用户信息 */}

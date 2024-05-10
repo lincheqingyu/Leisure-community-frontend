@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from '../../style/Header'
+import Header from '../../components/Header/Header'
 import './Zhanghao.css'
 import Zhanghaoheader from './Zhanghaoheader'
 import Personalsider from './Personalsider'

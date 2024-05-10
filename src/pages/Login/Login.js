@@ -38,7 +38,7 @@ const Login = () => {
             </div>
             <div className='login'>
                 <Logo />
-                <div className='content'>
+                <div className='login-content'>
                     <Form
                         form={form}
                         name="normal_login"

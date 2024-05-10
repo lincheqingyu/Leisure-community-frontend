@@ -8,7 +8,7 @@ class Layout extends Component {
         return (
             <div className='Layout-container'>
                 <Header/>
-                我是首页
+                开摆
             </div>
         );
     }

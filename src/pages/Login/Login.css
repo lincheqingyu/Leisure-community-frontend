@@ -34,24 +34,24 @@
   display: flex;
   text-align: center;
 }
-.login .content {
+.login .login-content {
   display: flex;
   flex-direction: column; /* 垂直排列 */
   align-items: center; /* 垂直居中 */
   text-align: center; /* 水平居中 */
 }
-.login .content .remember-forgot-container {
+.login .login-content .remember-forgot-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* 将子元素分散对齐 */
 }
-.login .content .button {
+.login .login-content .button {
   display: flex;
   flex-direction: column; /* 垂直排列 */
   align-items: center; /* 垂直居中 */
   margin-top: 40px;
 }
-.login .content .button .login-form-button {
+.login .login-content .button .login-form-button {
   width: 200px;
   height: 40px;
 }

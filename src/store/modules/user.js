@@ -11,7 +11,7 @@ const userStore=createSlice({
     //数据状态
     initialState:{
         token:getToken()||'',
-        uerInfo:{}
+        userInfo:{}
     },
     //同步修改方法
     reducers:{
@@ -20,14 +20,14 @@ const userStore=createSlice({
             //存一份在localstorage
             _setToken(action.payload)
         },
-        setuserInfo(state,action){
+        setUserInfo(state, action){
             state.userInfo=action.payload
         }
     }
 })
 
 // 解构actionCreate
-const {setToken,setuserInfo}=userStore.actions
+const {setToken,setUserInfo}=userStore.actions
 
 //获取reducer函数
 const userReducer = userStore.reducer
@@ -48,7 +48,7 @@ const fetchUserInfo=()=>{
     return async (dispatch) => {
         //const res=await request.get('')
         const res= await getProfileAPI()
-        dispatch(setuserInfo(res.data))
+        dispatch(setUserInfo(res.data))
     }
 }
 

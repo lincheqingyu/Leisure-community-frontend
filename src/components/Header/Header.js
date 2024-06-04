@@ -52,8 +52,8 @@ const Header = () => {
                                          alt="letter"/>
                                 </a>
                             </Menu.Item>
-                            <Menu.Item key="personal">
-                                <a href="/Personal">
+                            <Menu.Item key="userhome">
+                                <a href="/UserHome">
                                     <img className='header-picture3'
                                          src={require('@/assets/images/header/personal.png')} alt="personal"/>
                                 </a>

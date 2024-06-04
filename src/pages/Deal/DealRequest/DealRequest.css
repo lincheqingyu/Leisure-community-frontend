@@ -1,0 +1,59 @@
+.wrap-inside {
+    width: 100%;
+}
+
+.app {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.reply-wrap {
+    position: relative;
+}
+
+.bili-avatar {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.bili-avatar-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border: none;
+    border-radius: 50%;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translate(-50%, -50%);
+}
+
+.user-name{
+    font-size: large;
+}
+
+.reply-item {
+    padding: 22px 0 0 80px;
+
+}
+
+.reply-none {
+    height: 64px;
+    margin-bottom: 80px;
+    color: #99a2aa;
+    font-size: 13px;
+    line-height: 64px;
+    text-align: center;
+}
+
+.reply-HL {
+    color: #5F9CF5;
+    font-size: larger;
+}

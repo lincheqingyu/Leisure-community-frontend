@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.personal-bk {
+  background-color: #f0f4f7;
+  height: 100vh; /* 让背景充满整个屏幕 */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 隐藏滚动条 */
+}
+
+.list-three {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* 设置为竖直排列 */
+  align-items: center; /* 左对齐 */
+  border-right: 1px solid #f0f4f7;
+  width: 15%; /* 导航栏宽度 */
+  margin-top: 40px;
+}
+
+.list-three li {
+  margin-bottom: 20px; /* 调整每个选项之间的间距 */
+}
+
+.list-three a {
+  color: #6f6b6b;
+}
+
+.list-three a:hover {
+  color: #0055ee;
+  text-decoration-line: underline;
+  transition: all 0.5s;
+}
+
+.borderActive {
+  color: #0055ee !important;
+}
+
+.personal-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.personal-main {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  background-color: #f5fbfd;
+}
+
+.personal-content {
+  display: flex;
+  background-color: #f5fbfd;
+  flex: 1;
+}
+
+.personalheader-all {
+  background-color: #f5fbfd;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-profile {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.user-main {
+  display: flex;
+}
+
+.avatar img {
+  width: 140px; /* 设置头像宽度 */
+  height: 140px; /* 设置头像高度 */
+  margin-top: 30px;
+}
+
+.user-info {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.edit-button {
+  margin-top: 80px;
+}
+
+.edit-button button {
+  height: 70px;
+  width: 150px;
+  background-color: #72b8ff;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: none;
+}
+
+/*# sourceMappingURL=Personal.css.map */

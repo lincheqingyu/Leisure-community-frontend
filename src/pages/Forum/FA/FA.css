@@ -61,12 +61,12 @@
   margin-top: 14px;
   background-color: #e3e5e7;
 }
-.reply-item .content-wrap .user-info {
+.reply-item .content-wrap .fa-user-info {
   display: flex;
   flex-direction: column; /* 列排列 */
   margin-bottom: 4px;
 }
-.reply-item .content-wrap .user-info .user-name {
+.reply-item .content-wrap .fa-user-info .user-name {
   height: 30px;
   margin-right: 5px;
   font-size: 20px;

@@ -1,45 +1,50 @@
 @charset "UTF-8";
 .forum-bk {
-  background-color: #F0F4F7;
+  background-color: #f0f4f7;
 }
 
 .list-one {
   list-style: none;
   display: flex;
   align-items: center;
-  width: 70%;
+  justify-content: space-between;
   float: left;
+  margin-left: 15%;
+  margin-top: 1em;
 }
 
 .list-one a {
-  color: #6F6B6B;
+  color: #6f6b6b;
   padding-right: 70px;
   display: flex;
 }
 
 .list-one a:hover {
-  color: #0055EE;
+  color: #0055ee;
   text-decoration-line: underline;
   text-underline-offset: 0.8em;
   transition: all 0.5s;
 }
 
 .borderActive {
-  color: #0055EE !important;
+  color: #0055ee !important;
 }
 
 .Search {
   display: flex;
   align-items: center;
   float: right;
-  height: 50%;
-  width: 100px;
+  /* height: 54%; */
+  /* width: 100px; */
+  margin-right: 10%;
 }
 
 .forum-container {
-  background-color: #DCEDFF;
+  background-color: #dcedff;
+  height: 80px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between; /* 将子元素分散对齐 */
 }
 

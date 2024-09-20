@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Button, Checkbox, Form, Input, message} from 'antd';
-import { LockOutlined, UserOutlined} from '@ant-design/icons';
+import { LockOutlined, UserOutlined, EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import './Login.scss'
 import Logo from "@/components/Logo/Logo";
 import {useDispatch} from 'react-redux'
@@ -10,6 +10,7 @@ import {useNavigate} from "react-router-dom";
 
 const Login = () => {
     const [form] = Form.useForm();
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     const dispatch= useDispatch()
 
@@ -17,17 +18,24 @@ const Login = () => {
 
     // 表单成功提交
     const onFinish = async (values) => {
-        console.log('Received values of form: ', values);
+        console.log('表单提交的值: ', values);
         try {
-            // 触发异步action fetchLogin
-            await dispatch(fetchLogin(values));
-            //1.跳转到首页
-            navigate('/forum');
-            //2.提示用户登陆成功
-            message.success('登陆成功');
+            const response = await dispatch(fetchLogin(values));
+            
+            console.log('response: ', response);
+            if (response.status === 200) {
+                // 登录成功
+                navigate('/forum');
+                //message.success('登录成功');
+                message.success(`${response.data}`);
+            } else {
+                // 登录失败
+                message.error(`${response.status} ${response.data}`);
+            }
         } catch (error) {
-            // 登录失败时的错误处理
-            message.error('用户名或密码错误');
+            // 处理网络错误或其他未预期的错误
+            message.error('登录失败，请稍后再试');
+            console.error('登录错误:', error);
         }
     };
 
@@ -80,8 +88,13 @@ const Login = () => {
                         >
                             <Input
                                 prefix={<LockOutlined className="site-form-item-icon"/>}
-                                type="password"
-                                placeholder="Password"
+                                type={passwordVisible ? 'text' : 'password'}
+                                placeholder="密码"
+                                suffix={
+                                    <span onClick={() => setPasswordVisible(!passwordVisible)}>
+                                        {passwordVisible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
+                                    </span>
+                                }
                             />
                         </Form.Item>
                         <div className='remember-forgot-container'>
@@ -102,7 +115,7 @@ const Login = () => {
 
                 <div className='link'>
                     <Form.Item>
-                        <a href="/register">还未拥有账号？点击注册>></a>
+                        <a href="/register">{'还未拥有账号？点击注册>>'}</a>
                     </Form.Item>
                 </div>
             </div>

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.privateletter-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.privateletter-left {
+  height: 100%;
+  width: 240px;
+  background-color: #f7fdff;
+}
+
+.left-up {
+  width: 240px;
+  border-bottom-style: solid; /* 设置底部边框样式为实线 */
+  border-bottom-width: 2px; /* 设置底部边框宽度为2像素 */
+  border-bottom-color: #f0f4f7;
+}
+
+.left-up p {
+  font-size: 28px;
+  color: #17233d;
+  padding-top: 25px;
+  padding-left: 20px;
+  letter-spacing: 5px;
+}
+
+.left-down {
+  height: 325px;
+  width: 200px;
+}
+
+.left-down img {
+  width: 240px;
+  height: 240px;
+}
+
+.privateletter-right {
+  background-color: #d8ddde;
+  flex: 1;
+  height: 100%;
+}
+
+.right-up {
+  height: 300px;
+  border-bottom-style: solid; /* 设置底部边框样式为实线 */
+  border-bottom-width: 2px; /* 设置底部边框宽度为2像素 */
+  border-bottom-color: #f5fbfd;
+}
+
+/*# sourceMappingURL=Privateletter.css.map */

@@ -53,7 +53,12 @@ const Header = () => {
                                 </a>
                             </Menu.Item>
                             <Menu.Item key="userhome">
-                                <a href="/UserHome">
+                                {/* <a href="/UserHome">
+                                    <img className='header-picture3'
+                                         src={require('@/assets/images/header/personal.png')} alt="personal"/>
+                                </a> */}
+                                
+                                <a href="/Personal">
                                     <img className='header-picture3'
                                          src={require('@/assets/images/header/personal.png')} alt="personal"/>
                                 </a>

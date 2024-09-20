@@ -1,0 +1,13 @@
+.examine-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.examine-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=Examine.css.map */

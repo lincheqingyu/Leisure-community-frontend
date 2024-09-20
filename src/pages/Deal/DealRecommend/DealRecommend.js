@@ -1,6 +1,6 @@
 import React from "react"
-import avatar from '../../../assets/images/deal/bozai.png'
-import "./DealRecommend.css"
+import avatar from '../../../assets/images/deal/avatar.png'
+import "./DealRecommend.scss"
 const DealRecommend = () => {
   return (
     <>
@@ -22,7 +22,7 @@ const DealRecommend = () => {
 
               <div className="content-wrap">
                 {/* 用户名 */}
-                <div className="user-info">
+                <div className="fa-user-info">
                   <div className="user-name">夜冰</div>
                 </div>
                 {/* 评论时间 */}
@@ -66,7 +66,7 @@ const DealRecommend = () => {
 
               <div className="content-wrap">
                 {/* 用户名 */}
-                <div className="user-info">
+                <div className="fa-user-info">
                   <div className="user-name">夜冰</div>
                 </div>
                 {/* 评论时间 */}

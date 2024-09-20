@@ -1,22 +1,14 @@
-/*
- * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @Date: 2024-01-30 14:20:56
- * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2024-02-03 16:10:45
- * @FilePath: \my-first-reactd:\桌面\小日常\web练习\new_code2\src\pages\Deal\Deal.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
-// Deal.js
 import React, { useState } from 'react'
-import "./Deal.css"
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { Input } from 'antd';
-import DealRecommend from './DealRecommend/DealRecommend';
+import Header from '@/components/Header/Header'
+import './Deal.scss'
+import { Link, Navigate, Route, Routes } from 'react-router-dom'
+import { Input } from 'antd'
+import DealRecommend from './DealRecommend/DealRecommend'
 import DealRequest from "./DealRequest/DealRequest"
-import Header from '@/components/Header/Header';
-const { Search } = Input;
+const { Search } = Input
+
 const Deal = () => {
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+  const onSearch = (value, _e, info) => console.log(info?.source, value)
   // 点击切换高亮：
   const [show, setShow] = useState(0)
   const HL = (item, index) => {
@@ -40,19 +32,18 @@ const Deal = () => {
     }
   ]
   return (
-    <div className=''>
-      <Header/>
-      <h1>
-        <div className='searchTwo'>
-          <Search
+    <div className='unuse-all'>
+      <Header />
+      <div className='deal-search'>
+        <Search
             placeholder="搜索内容"
             allowClear
             enterButton="搜索"
             size="large"
             onSearch={onSearch}
-          />
-        </div>
-      </h1>
+            className='searchOne'
+        />
+      </div>
       <div className='wrap'>
         <div className='wrap-top'>
           <ul>

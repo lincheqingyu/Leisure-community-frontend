@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.realname-all {
+  background-color: #f5fbfd;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.realname-box {
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  margin: 80px auto;
+  border-radius: 20px;
+}
+
+.realname-box p {
+  font-size: 36px;
+  padding-top: 40px;
+  margin-left: 60px;
+}
+
+.authentication-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 居中对齐，可根据需要调整 */
+}
+
+.authentication-box input {
+  width: 500px;
+  height: 60px;
+  background-color: #f0efef;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.authentication-box input,
+.authentication-box button {
+  margin-bottom: 30px; /* 调整元素之间的垂直间距，可根据需要调整 */
+}
+
+.authentication-box button {
+  width: 200px;
+  height: 50px;
+  background-color: #0055ee;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 26px;
+  letter-spacing: 20px;
+}
+
+/*# sourceMappingURL=Realname.css.map */

@@ -6,9 +6,9 @@ import {getToken} from "@/utils/token";
 //3.请求/相应拦截器
 
 const request = axios.create({
-    //baseURL: 'http://127.0.0.1:4523/m1/3290659-0-default',    //请求根地址:Apifox本地Mock请求
-    //baseURL: 'http://localhost:8080',    //本地请求根地址:8080
-    baseURL: 'https://mock.apifox.com/m1/3290659-0-default',    //请求根地址:Apifox云端Mock请求
+    //baseURL: 'http://127.0.0.1:4523/m1/3290659-0-default',    //请求根地址:Apifox本地Mock请求，post发送到本地可以
+    baseURL: 'http://localhost:8080',    //本地请求根地址:8080
+    //baseURL: 'https://mock.apifox.com/m1/3290659-0-default',    //请求根地址:Apifox云端Mock请求，post发送到云端会有跨域CORS问题
     timeout: 2000,  //超时时间2s
     headers: {'X-Custom-Header': 'foobar'}
 });
@@ -19,10 +19,11 @@ request.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
     // 操作这个config 注入token数据
     // 1.获取到token
-    // const token = getToken()
-    // if(token){
-    //
-    // }
+    const token = getToken()
+    if(token){
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    
     // 2、按照后端的格式要求做token拼接
     return config;
 }, function (error) {

@@ -1,0 +1,59 @@
+.letter-bk {
+  background-color: #f0f4f7;
+  height: 100%; /* 让背景充满整个屏幕 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 隐藏滚动条 */
+  flex-direction: column;
+}
+
+.letter-container {
+  background-color: #f0f4f7;
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.list-two {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* 设置为竖直排列 */
+  align-items: flex-start; /* 左对齐 */
+  width: 150px; /* 导航栏宽度 */
+}
+
+.list-two li {
+  margin-bottom: 20px; /* 调整每个选项之间的间距 */
+}
+
+.list-two a {
+  color: #6f6b6b;
+}
+
+.list-two a:hover {
+  color: #0055ee;
+  text-decoration-line: underline;
+  transition: all 0.5s;
+}
+
+.borderActive {
+  color: #0055ee !important;
+}
+
+.letter-content {
+  display: flex;
+  background-color: #f7fdff;
+  width: 65%;
+  //height: 580px;
+}
+
+.letter-title{
+  background-color: #dcedff;
+  height: 13vh;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  padding-left: 10vw;
+  font-size: 24px;
+}

@@ -1,0 +1,78 @@
+.collect-all {
+  background-color: #f5fbfd;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-content1 {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.collect1 {
+  width: 250px;
+  height: 100%;
+}
+
+.collect2 {
+  width: 250px;
+  height: 100%;
+}
+
+.collect3 {
+  width: 250px;
+  height: 100%;
+}
+
+.collect4 {
+  width: 250px;
+  height: 100%;
+}
+
+.collect1 img {
+  width: 240px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.collect2 img {
+  width: 240px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.collect3 img {
+  width: 240px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.collect4 img {
+  width: 240px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.collect-footer img {
+  width: 30px;
+  height: 30px;
+}
+
+.collect-footer {
+  display: flex;
+}
+
+.publish-person {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.like {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+/*# sourceMappingURL=Collect.css.map */

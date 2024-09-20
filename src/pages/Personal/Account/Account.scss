@@ -1,0 +1,67 @@
+.account-all {
+  background-color: #f5fbfd;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.main-content p {
+  font-size: 28px;
+  padding-top: 10px;
+  padding-left: 60px;
+}
+
+.account-name {
+  display: flex;
+  font-size: 24px;
+  margin: 0px 0px 40px 0px;
+}
+
+.account-type {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-nickname {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-phone {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-email {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-password {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-authentication {
+  display: flex;
+  font-size: 24px;
+  margin: 40px 0px;
+}
+
+.account-left {
+  width: 400px;
+  padding-left: 60px;
+}
+
+.account-content {
+  width: 400px;
+}
+
+.account-right {
+  width: 400px;
+}

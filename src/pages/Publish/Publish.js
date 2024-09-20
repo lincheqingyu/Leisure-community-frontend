@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './Publish.css'
-import Header from "@/components/Header/Header"; // 导入样式文件
+import Header from '@/components/Header/Header'
+import './Publish.scss' // 导入样式文件
 
 const Publish = () => {
   // 使用状态来管理主题、按钮选择、正文和图片
@@ -44,57 +44,64 @@ const Publish = () => {
   return (
     <div className='publish-all'>
       <Header />
-      <div className='publish-container'>
-        <div className='publish-header'>
-          <span className='publish-title'>主题：</span>
-          <input
-            type='text'
-            placeholder='请输入主题'
-            value={topic}
-            onChange={handleTopicChange}
-          />
-          <div className='publish-options'>
-            <button
-              className={selectedOption === 'idle' ? 'selected' : ''}
-              onClick={() => handleOptionSelect('idle')}
-            >
-              出闲置
-            </button>
-            <button
-              className={selectedOption === 'seeking' ? 'selected' : ''}
-              onClick={() => handleOptionSelect('seeking')}
-            >
-              求闲置
+      <div className='publish-main'>
+        <div className='publish-container'>
+          <div className='publish-header'>
+            <div className='header-left'>
+              <span className='publish-title'>主题：</span>
+              <input
+                type='text'
+                placeholder='请输入主题'
+                value={topic}
+                onChange={handleTopicChange}
+                style={{ width: '100%' }}
+              />
+            </div>
+            <div className='publish-options'>
+              <button
+                className={selectedOption === 'idle' ? 'selected' : ''}
+                onClick={() => handleOptionSelect('idle')}
+              >
+                出闲置
+              </button>
+              <button
+                className={selectedOption === 'seeking' ? 'selected' : ''}
+                onClick={() => handleOptionSelect('seeking')}
+              >
+                求闲置
+              </button>
+            </div>
+          </div>
+          <div className='publish-content'>
+            <textarea
+              placeholder='请输入正文'
+              value={content}
+              onChange={handleContentChange}
+            ></textarea>
+          </div>
+          <div className='publish-footer'>
+            <div className='file-upload-container'>
+              <label for='file-input' className='file-input-label'>
+                +
+              </label>
+              <input id='file-input' type='file' accept='image/*' onChange={handleImageUpload} />
+            </div>
+            {image && (
+              <div className='image-preview'>
+                <img src={URL.createObjectURL(image)} alt='上传的图片' />
+              </div>
+            )}
+            <button className='publish-button' onClick={handlePublish}>
+              发布
             </button>
           </div>
+
         </div>
-        <div className='publish-content'>
-          <textarea
-            placeholder='请输入正文'
-            value={content}
-            onChange={handleContentChange}
-          ></textarea>
-        </div>
-        <div className='file-upload-container'>
-          <label form='file-input' className='file-input-label'>
-            +
-          </label>
-          <input id='file-input' type='file' accept='image/*' onChange={handleImageUpload} />
-        </div>
-        {image && (
-          <div className='image-preview'>
-            <img src={URL.createObjectURL(image)} alt='上传的图片' />
-          </div>
-        )}
-        <button className='publish-button' onClick={handlePublish}>
-          发布
-        </button>
+
       </div>
+
     </div>
   )
 }
 
-export default Publish;
-
-
-
+export default Publish

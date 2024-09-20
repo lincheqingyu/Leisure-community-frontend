@@ -1,0 +1,12 @@
+.all-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=All.css.map */

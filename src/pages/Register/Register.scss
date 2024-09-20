@@ -2,16 +2,11 @@
   background-image: url('../../assets/images/register/pattern.png'); /* 替换为你的图片路径 */
   background-size: cover;
   background-position: center;
-  //background-repeat: no-repeat;
   background-color: #CEE6FF;
   height: 100vh; /* 设置高度为视窗高度 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  //justify-content: center;
   align-items: center;
-  //text-align: center;
-  //max-height: 100%;
 }
 
 .register-container{
@@ -19,69 +14,70 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 40%;
-  //order: 1px #181931 solid;
-
 }
 
 
 .welcome-picture {
-
-  //.welcome{
-  //  width: 80%;
-  //}
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  //width: 80%;
-  transform: scale(0.8); /* 缩放图片至原始大小的50% */
-  //width: 35%;
-  //height: 10%;
-  padding: 3% 0;
-  //padding: 5% 0;
-  //margin-top: 6%;
-  //border: 1px #181931 solid;
+  padding: 4% 0 4% 0;
+
+  .welcome{
+    width: 80%;
+    height: auto;
+  }
 }
 
 .wrap-contain {
-  //height: 85%;
   display: flex;
-  text-align: center;
-  //align-self: flex-end; /* 在交叉轴底部对齐 */
-  //height: 70%;
-  //width: 40%;
-  //margin-top: auto; /* 将顶部边距设置为 auto，使内容靠近页面底部 */
-  //margin-right: 28%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #F3FCFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加投影 */
-  //border: 1px red solid
-  //position: fixed; /* 使用固定定位 */
-  //bottom: 0; /* 贴底部 */
-  //border: 1px red solid;
+
+  .shareCommunity {
+    //background-color: rgb(243, 252, 255);
+    display: flex; /* 设置为弹性容器 */
+    flex-direction: column;
+    width: 100%;
+    margin: 5% 0 5% 10%;
+    //height: 10%;
+    //margin-top: 5%;
+    //margin-right: 40%;
+
+    .title {
+      width: 40%;
+      //padding: 20px;
+      //width: 100%;
+      //height: auto; /* 保持图片宽高比例 */
+    }
+  }
+
+  .register-form{
+    display: flex;
+    flex-direction: column;
+    padding:0 5% 0 5%;
+    width: 85%;
+
+    .Verification-code{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      //border: 1px red solid
+      .vcode-btn{
+         margin-left: 10px;
+      }
+    }
+
+  }
+
+
 }
 
-.shareCommunity {
-  //background-color: rgb(243, 252, 255);
-  display: flex; /* 设置为弹性容器 */
-  flex-direction: column;
-  //text-align: center;
-  //position: absolute;
-  //top: 31%;
-  // padding: 5% 10%;
-  //width: 45%;
-  //height: 25%;
-}
 
-.register-content{
-  padding: 5% 8%;
-}
-
-.shareCommunity img {
-  padding: 20px;
-  width: 45%;
-  height: auto; /* 保持图片宽高比例 */
-}
 
 .remember-forgot-container {
   display: flex;
@@ -89,18 +85,14 @@
   justify-content: space-between; /* 将子元素分散对齐 */
 }
 
-.Verification-code{
-  display: flex;
-  flex-direction: row;
-  //border: 1px red solid
-}
+
 
 .button{
   margin-left: 10px;
 }
 
 .text-content{
-  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 //.title-text{
@@ -112,3 +104,14 @@
 //  //  color: blue;
 //  //}
 //}
+
+
+
+
+.remember-forgot-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 将子元素分散对齐 */
+  width: 100%;
+  //align-items: center;
+}

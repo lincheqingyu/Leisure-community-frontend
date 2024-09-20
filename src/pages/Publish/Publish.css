@@ -1,26 +1,42 @@
+@charset "UTF-8";
 .publish-all {
   /*整体*/
   background-color: #f5f5f5;
   height: 100vh;
-  overflow-y: hidden;
+  width: 100%;
+  overflow: hidden;
 }
+
+.publish-main {
+  display: flex;
+  justify-content: center;
+}
+
 .publish-container {
   /*发布框*/
   background-color: white;
-  width: 1200px;
+  width: 60%;
   height: 600px;
-  margin-left: 360px;
   margin-top: 100px;
 }
+
 .publish-header {
   display: flex;
+  justify-content: space-between;
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 .publish-title {
   /*主题样式*/
   font-size: 28px;
   margin-left: 40px;
   margin-top: 40px;
 }
+
 .publish-header input {
   /*主题输入框*/
   width: 600px;
@@ -32,7 +48,6 @@
   /* 出闲置、求闲置 */
   display: flex;
   margin-top: 30px;
-  margin-left: 200px;
   height: 50px;
 }
 
@@ -44,7 +59,9 @@
   cursor: pointer; /*变光标*/
   letter-spacing: 8px;
   border-radius: 10px;
+  width: 90px;
 }
+
 .publish-options button.selected {
   background-color: #3688ff; /* 选中按钮的颜色 */
 }
@@ -63,6 +80,11 @@
   margin-bottom: 10px;
 }
 
+.publish-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .publish-button {
   display: flex;
   height: 50px;
@@ -73,8 +95,8 @@
   cursor: pointer; /*变光标*/
   letter-spacing: 16px;
   border-radius: 10px;
-  margin-left: 980px;
-  margin-top: -20px;
+  margin-top: 120px;
+  margin-right: 60px;
   font-size: 28px;
   padding-left: 12px;
   padding-top: 8px;
@@ -96,7 +118,7 @@
   padding-top: 5px;
   cursor: pointer;
   border-radius: 10%;
-  margin-left: 100px;
+  margin-left: 60px;
   margin-top: 20px;
   border: 1px solid #b0b1b2;
 }
@@ -105,3 +127,5 @@
 #file-input {
   display: none;
 }
+
+/*# sourceMappingURL=Publish.css.map */

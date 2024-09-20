@@ -1,30 +1,60 @@
-.letter-all {
-  background-color: #f5f5f5;
-  height: 100vh;
-  overflow-y: hidden;
+@charset "UTF-8";
+.letter-bk {
+  background-color: #f0f4f7;
+  height: 100%; /* 让背景充满整个屏幕 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 隐藏滚动条 */
+  flex-direction: column;
 }
-.all {
-  margin: 0 300px; /* 调整左右边距的数值 */
-  padding-top: 40px;
+
+.letter-container {
+  background-color: #f0f4f7;
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  justify-content: center;
 }
-h1 {
-  background-color: #dcedff;
-  height: 100px;
-  padding-top: 40px;
-  padding-left: 100px;
+
+.list-two {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* 设置为竖直排列 */
+  align-items: flex-start; /* 左对齐 */
+  width: 150px; /* 导航栏宽度 */
+}
+
+.list-two li {
+  margin-bottom: 20px; /* 调整每个选项之间的间距 */
+}
+
+.list-two a {
+  color: #6f6b6b;
+}
+
+.list-two a:hover {
+  color: #0055ee;
+  text-decoration-line: underline;
+  transition: all 0.5s;
+}
+
+.borderActive {
+  color: #0055ee !important;
 }
 
 .letter-content {
+  display: flex;
   background-color: #f7fdff;
-  width: 1120px;
-  height: 500px;
+  width: 65%;
 }
-.letter-content img {
-  padding: 80px 350px;
+
+.letter-title {
+  background-color: #dcedff;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10vw;
+  font-size: 24px;
 }
-:where(.css-dev-only-do-not-override-1b0bdye).ant-layout .ant-layout-sider-children {
-  height: 100%;
-  margin-top: -0.1px;
-  background-color: rgb(245,245,245);
-  padding-top: 0.1px;
-}
+
+/*# sourceMappingURL=Letter.css.map */

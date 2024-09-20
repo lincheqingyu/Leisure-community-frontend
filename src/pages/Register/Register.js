@@ -1,32 +1,52 @@
-import React, {useEffect, useState} from 'react';
-import {Button, Form, Input, message, Checkbox, Typography} from 'antd';
-import {LockOutlined, UserOutlined, MehOutlined, SafetyOutlined} from '@ant-design/icons';
-
+import React, { useState } from 'react';
+import {Button, Form, Input, message, Checkbox, Typography, Flex} from 'antd';
+import {LockOutlined, UserOutlined, MehOutlined, SafetyOutlined, EyeOutlined, EyeInvisibleOutlined} from '@ant-design/icons';
+import {useDispatch, useSelector} from 'react-redux';
+import {register} from '@/store/modules/user';
+import {useNavigate} from 'react-router-dom';
 import './Register.scss';
 
 const Register = () => {
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
-    const [isSuccessMessageShown, setIsSuccessMessageShown] = useState(false);
-    const { Text } = Typography;
+    const {Text} = Typography;
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const {isLoading} = useSelector(state => state.user);
 
     // 表单成功提交
-    const onFinish = (values) => {
-        console.log('Received values of form: ', values);
-        setIsSuccessMessageShown(true);
-    }
-
-    useEffect(() => {
-        if (isSuccessMessageShown) {
+    const onFinish = async (values) => {
+        console.log('表单提交的值: ', values);
+        try {
+            await dispatch(register(values));
             messageApi.open({
                 type: 'success',
-                content: '获取成功',
+                content: '注册成功！',
+            });
+            navigate('/');
+        } catch (error) {
+            console.error('注册出错:', error.message||error);
+            let errorMessage = '注册失败，请稍后再试。';
+            if (typeof error === 'string') {
+                errorMessage = error;
+            } else if (error.message) {
+                errorMessage = error.message;
+            } else if (error instanceof Error) {
+                errorMessage = error.toString();
+            }
+            //console.error('注册失败：', errorMessage); // 打印错误信息到控制台
+            messageApi.open({
+                type: 'error',
+                content: errorMessage,
             });
         }
-    }, [isSuccessMessageShown, messageApi]);
+    }
 
     return (
         <div className='background-container'>
+            {contextHolder}
             <div className='register-container'>
                 <div className='welcome-picture'>
                     <img src={require('@/assets/images/register/welcome.png')} className='welcome' alt=''/>
@@ -37,57 +57,69 @@ const Register = () => {
                              alt='闲享社群'/>
                         {/*<a href="/" type="primary">返回登录</a>*/}
                     </div>
-                    <div className='register-content'>
-                        <Form
-                            form={form}
-                            name="normal_login"
-                            className="username-password"
-                            validateTrigger='onBlur' //失焦验证
-                            initialValues={{
-                                remember: true,
-                                username: '',
-                                name: '',
-                                password: '',
-                                safePassword: ''
-                            }}
-                            onFinish={onFinish}
-                        >
-                            <Form.Item name="username" rules={[{
-                                required: true,
-                                message: '请输入您的用户名！'
-                            }, {pattern: /^1[3-9]\d{9}$/, message: '请输入正确的手机号！'}]}>
-                                <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Username"/>
-                            </Form.Item>
-                            <Form.Item name='name' rules={[{require: true, message: "请输入您的昵称"}]}>
-                                <Input prefix={<MehOutlined className="site-form-item-icon"/>} type='name'
-                                       placeholder='Name'/>
-                            </Form.Item>
-                            <Form.Item name="password" rules={[{required: true, message: '请输入您的密码！'}]}>
-                                <Input prefix={<LockOutlined className="site-form-item-icon"/>} type="password"
-                                       placeholder="Password"/>
-                            </Form.Item>
-                            <Form.Item name="password" rules={[{required: true, message: '请输入您验证码！'}]}>
-                                <div className='Verification-code'>
-                                    <Input prefix={<SafetyOutlined className="site-form-item-icon"/>} type="safePassword"
-                                           placeholder="safePassword"/>
-                                    {contextHolder}
-                                    <Button className='button'
-                                            onClick={() => setIsSuccessMessageShown(true)}>获取验证码</Button>
-                                </div>
-                            </Form.Item>
-                        </Form>
-                        <Form className='remember-forgot-container'>
-                            <Button type="primary" htmlType="submit" className="login-form-button">注册</Button>
-                            <a href="/">
-                                <Button type="primary">返回登录</Button>
-                            </a>
-                        </Form>
-                        <Form.Item className='text-content'>
-                            <Checkbox />
-                            <Text>我已经认真阅读并同意闲享社群的</Text>
-                            <a href=''>《使用协议》</a>
+                    <Form
+                        form={form}
+                        name="normal_login"
+                        className="register-form"
+                        validateTrigger='onBlur' //失焦验证
+                        initialValues={{
+                            remember: true,
+                            username: '',
+                            name: '',
+                            password: '',
+                            safePassword: ''
+                        }}
+                        onFinish={onFinish}
+                    >
+                        <Form.Item name="telephone" rules={[{
+                            required: true,
+                            message: '请输入您的手机号！'
+                        }, {pattern: /^1[3-9]\d{9}$/, message: '请输入正确的手机号！'}]}>
+                            <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="telephone"/>
                         </Form.Item>
-                    </div>
+                        <Form.Item name='username' rules={[{require: true, message: "请输入您的昵称"}]}>
+                            <Input prefix={<MehOutlined className="site-form-item-icon"/>} type='name'
+                                   placeholder='username'/>
+                        </Form.Item>
+                        <Form.Item name="password" rules={[{required: true, message: '请输入您的密码！'}]}>
+                            <Input
+                                prefix={<LockOutlined className="site-form-item-icon"/>}
+                                type={passwordVisible ? 'text' : 'password'}
+                                placeholder="密码"
+                                suffix={
+                                    <span onClick={() => setPasswordVisible(!passwordVisible)}>
+                                        {passwordVisible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
+                                    </span>
+                                }
+                            />
+                        </Form.Item>
+                        <Form.Item name="verificationCode">
+                            <Flex justify="space-between" gap={20}>
+                                <Input prefix={<SafetyOutlined className="site-form-item-icon"/>}
+                                       type="safePassword"
+                                       placeholder="safePassword"/>
+                                {/*<Form.Item name="Verification-code">*/}
+                                {/*    */}
+                                {/*</Form.Item>*/}
+                                <Button className="vcode-btn">获取验证码</Button>
+                            </Flex>
+                        </Form.Item>
+
+                        <Form.Item name='remember-forgot-container'>
+                            <Flex justify="space-between">
+                                <Button type="primary" htmlType="submit" className="login-form-button"
+                                        loading={isLoading}>注册</Button>
+                                <a href="/">
+                                    <Button type="primary" onClick={() => navigate('/')}>返回登录</Button>
+                                </a>
+                            </Flex>
+                        </Form.Item>
+                        <Form.Item className='text-content'>
+                            <Checkbox/>
+                            <Text>我已经认真阅读并同意闲享社群的</Text>
+                            <a href='/'>《使用协议》</a>
+                        </Form.Item>
+                    </Form>
                 </div>
             </div>
         </div>

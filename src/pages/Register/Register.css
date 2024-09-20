@@ -7,7 +7,6 @@
   height: 100vh; /* 设置高度为视窗高度 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -16,38 +15,50 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 40%;
 }
 
 .welcome-picture {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transform: scale(0.8); /* 缩放图片至原始大小的50% */
-  padding: 3% 0;
+  padding: 4% 0 4% 0;
+}
+.welcome-picture .welcome {
+  width: 80%;
+  height: auto;
 }
 
 .wrap-contain {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #F3FCFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加投影 */
 }
-
-.shareCommunity {
+.wrap-contain .shareCommunity {
   display: flex; /* 设置为弹性容器 */
   flex-direction: column;
+  width: 100%;
+  margin: 5% 0 5% 10%;
 }
-
-.register-content {
-  padding: 5% 8%;
+.wrap-contain .shareCommunity .title {
+  width: 40%;
 }
-
-.shareCommunity img {
-  padding: 20px;
-  width: 45%;
-  height: auto; /* 保持图片宽高比例 */
+.wrap-contain .register-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5% 0 5%;
+  width: 85%;
+}
+.wrap-contain .register-form .Verification-code {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrap-contain .register-form .Verification-code .vcode-btn {
+  margin-left: 10px;
 }
 
 .remember-forgot-container {
@@ -56,17 +67,19 @@
   justify-content: space-between; /* 将子元素分散对齐 */
 }
 
-.Verification-code {
-  display: flex;
-  flex-direction: row;
-}
-
 .button {
   margin-left: 10px;
 }
 
 .text-content {
-  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.remember-forgot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 将子元素分散对齐 */
+  width: 100%;
 }
 
 /*# sourceMappingURL=Register.css.map */

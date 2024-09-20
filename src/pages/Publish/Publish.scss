@@ -1,0 +1,127 @@
+.publish-all {
+  /*整体*/
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.publish-main {
+  display: flex;
+  justify-content: center;
+}
+
+.publish-container {
+  /*发布框*/
+  background-color: white;
+  width: 60%;
+  height: 600px;
+  margin-top: 100px;
+}
+.publish-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+
+}
+
+
+.publish-title {
+  /*主题样式*/
+  font-size: 28px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.publish-header input {
+  /*主题输入框*/
+  width: 600px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+.publish-options {
+  /* 出闲置、求闲置 */
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+}
+
+.publish-options button {
+  margin-right: 40px; /* 调整按钮之间的间距 */
+  background-color: #cccccc; /* 默认按钮颜色 */
+  color: white; /* 默认文字颜色 */
+  border: none;
+  cursor: pointer; /*变光标*/
+  letter-spacing: 8px;
+  border-radius: 10px;
+  width: 90px;
+}
+.publish-options button.selected {
+  background-color: #3688ff; /* 选中按钮的颜色 */
+}
+
+.publish-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.publish-content textarea {
+  /*正文输入框*/
+  width: 90%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.publish-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.publish-button {
+  display: flex;
+  height: 50px;
+  width: 100px;
+  background-color: #3688ff; /* 默认按钮颜色 */
+  color: white; /* 默认文字颜色 */
+  border: none;
+  cursor: pointer; /*变光标*/
+  letter-spacing: 16px;
+  border-radius: 10px;
+  margin-top: 120px;
+  margin-right: 60px;
+  font-size: 28px;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+
+.file-upload-container {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input-label {
+  display: inline-block;
+  width: 150px; /* 调整按钮宽度 */
+  height: 150px; /* 调整按钮高度 */
+  background-color: #d9d9d9; /* 设置按钮背景颜色 */
+  color: #b0b1b2; /* 设置按钮文本颜色 */
+  font-size: 100px;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+  border-radius: 10%;
+  margin-left: 60px;
+  margin-top: 20px;
+  border: 1px solid #b0b1b2;
+}
+
+/* 当文件选择后，隐藏默认的文件选择按钮 */
+#file-input {
+  display: none;
+}

@@ -21,10 +21,10 @@ request.interceptors.request.use(function (config) {
     // 1.获取到token
     const token = getToken()
     if(token){
+        // 2、按照后端的格式要求做token拼接
         config.headers.Authorization = `Bearer ${token}`;
     }
     
-    // 2、按照后端的格式要求做token拼接
     return config;
 }, function (error) {
     // 对请求错误做些什么

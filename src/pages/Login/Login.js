@@ -26,8 +26,25 @@ const Login = () => {
             if (response.status === 200) {
                 // 登录成功
                 navigate('/forum');
-                //message.success('登录成功');
-                message.success(`${response.data}`);
+                // 打印后端返回的完整数据
+                console.log('登录成功，后端返回数据:', response.data);
+                
+                // 显示成功消息
+                if (typeof response.data === 'string') {
+                    message.success(response.data);
+                } else if (response.data && response.data.user) {
+                    message.success(`欢迎回来，${response.data.user.nickname || response.data.user.username}`);
+                } else {
+                    message.success('登录成功');
+                }
+                
+                // 如果需要，您还可以打印特定的字段
+                if (response.data && response.data.token) {
+                    console.log('Token:', response.data.token);
+                }
+                if (response.data && response.data.user) {
+                    console.log('用户信息:', response.data.user);
+                }
             } else {
                 // 登录失败
                 message.error(`${response.status} ${response.data}`);
@@ -105,9 +122,10 @@ const Login = () => {
                                 忘记密码？
                             </a>
                         </div>
-                        <Form.Item className='button'>
+                        <Form.Item className='login-button'>
                             <Button type="primary" htmlType="submit" className="login-form-button">
-                                登录
+                                <div>登</div>
+                                <div>录</div>
                             </Button>
                         </Form.Item>
                     </Form>

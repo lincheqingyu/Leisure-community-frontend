@@ -12,7 +12,7 @@ function getToken(){
     return localStorage.getItem(TokenKey)
 }
 
-//hs
+//删
 function removeToken(){
     localStorage.removeItem(TokenKey)
 }

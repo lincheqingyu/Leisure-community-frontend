@@ -24,8 +24,11 @@ const Register = () => {
             messageApi.open({
                 type: 'success',
                 content: '注册成功！',
+                duration: 1, // 设置消息显示时间为2秒
+                onClose: () => {
+                    navigate('/');
+                }
             });
-            navigate('/');
         } catch (error) {
             console.error('注册出错:', error.message||error);
             let errorMessage = '注册失败，请稍后再试。';

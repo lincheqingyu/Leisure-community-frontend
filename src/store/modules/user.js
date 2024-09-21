@@ -1,6 +1,6 @@
 // 和用户相关的状态管理
 import { createSlice } from '@reduxjs/toolkit';
-import { registerAPI, loginAPI, getProfileAPI } from "@/apis/user";
+import { registerAPI, loginAPI, getProfileAPI, getUserInfoAPI } from "@/apis/user";
 import { setToken as _setToken, getToken } from "@/utils";
 import axios from 'axios';  // 确保已导入 axios
 
@@ -9,30 +9,43 @@ const userStore = createSlice({
     // 数据状态
     initialState: {
         token: getToken() || '',
-        userInfo: {},
+        userInfo: null,  // 修改为null，表示初始状态下没有用户信息
         isLoading: false,
         error: null,
         isRegistered: false
     },
     // 同步修改方法
     reducers: {
+        // 设置token
         setToken(state, action) {
             state.token = action.payload;
-            // 存一份在localstorage
+            // 同时存储在localStorage中
             _setToken(action.payload);
         },
+        //  设置用户信息
         setUserInfo(state, action) {
             state.userInfo = action.payload;
         },
+        //  设置加载状态
+        setLoading(state, action) {
+            state.isLoading = action.payload;
+        },
+        //  设置错误信息
+        setError(state, action) {
+            state.error = action.payload;
+        },
+        // 注册请求开始
         registerRequest(state) {
             state.isLoading = true;
             state.error = null;
             state.isRegistered = false;
         },
+        // 注册成功
         registerSuccess(state) {
             state.isLoading = false;
             state.isRegistered = true;
         },
+        // 注册失败
         registerFailure(state, action) {
             state.isLoading = false;
             state.error = action.payload;
@@ -41,8 +54,11 @@ const userStore = createSlice({
 });
 
 // 解构actionCreate
-const { setToken,
+const {
+    setToken,
     setUserInfo,
+    setLoading,
+    setError,
     registerRequest,
     registerSuccess,
     registerFailure
@@ -64,7 +80,7 @@ const fetchLogin = (loginForm) => {
             const errorMessage = error.response?.data || error.message || '未知错误';
             
             // 打印格式化的错误信息
-            console.error(`${status} ${errorMessage}`);
+            console.error(`登录失败: ${status} ${errorMessage}`);
             
             return { 
                 status: status,
@@ -74,14 +90,23 @@ const fetchLogin = (loginForm) => {
     };
 };
 
-// 异步方法 获取个人用户信息
+// 异步方法：获取个人用户信息（从后端API）
 const fetchUserInfo = () => {
     return async (dispatch) => {
-        const res = await getProfileAPI();
-        dispatch(setUserInfo(res.data));
+        dispatch(setLoading(true));
+        try {
+            const res = await getUserInfoAPI();
+            dispatch(setUserInfo(res.data));
+        } catch (error) {
+            console.error('获取用户信息失败:', error);
+            dispatch(setError(error.message || '获取用户信息失败'));
+        } finally {
+            dispatch(setLoading(false));
+        }
     };
 };
 
+// 异步方法：用户注册 
 // 修改 register 函数
 const register = (registerForm) => {
     return async (dispatch) => {

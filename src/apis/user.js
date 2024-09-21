@@ -35,3 +35,17 @@ export function registerAPI(formData) {
         data: formData
     });
 }
+
+// 获取用户信息
+export function getUserInfoAPI() {
+    return request({
+        url: '/api/user-info',
+        method: 'GET',
+    }).then(response => {
+        console.log('Get user info API response:', response);   //打印响应数据
+        return response;//返回响应数据
+    }).catch(error => {
+        console.error('Get user info API error:', error);   //打印错误信息
+        throw error;//抛出错误
+    });
+}

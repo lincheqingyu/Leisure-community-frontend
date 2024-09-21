@@ -28,7 +28,6 @@ const Realname = () => {
   return (
     <div className='realname-all'>
       <div className='main-content'>
-        <div className='realname-box'>
           <p>实名认证</p>
           <div className='authentication-box'>
             <input
@@ -45,9 +44,11 @@ const Realname = () => {
               onChange={(e) => setIdCardNumber(e.target.value)}
             />
 
-            <button onClick={handleSubmit}>提交</button>
+            <button onClick={handleSubmit}>
+              <div>提</div>
+              <div>交</div>
+            </button>
           </div>
-        </div>
       </div>
     </div>
   )

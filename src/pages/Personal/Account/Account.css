@@ -1,69 +1,116 @@
 .account-all {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   background-color: #f5fbfd;
-  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 800px;
   width: 100%;
-  overflow-y: hidden;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow-y: auto;
 }
-
 .main-content p {
-  font-size: 28px;
-  padding-top: 10px;
-  padding-left: 60px;
-}
-
-.account-name {
-  display: flex;
   font-size: 24px;
-  margin: 0px 0px 40px 0px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.account-type {
-  display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
-}
-
-.account-nickname {
-  display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
-}
-
-.account-phone {
-  display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
-}
-
-.account-email {
-  display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
-}
-
-.account-password {
-  display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
-}
-
+.account-name,
+.account-type,
+.account-nickname,
+.account-phone,
+.account-email,
+.account-password,
 .account-authentication {
   display: flex;
-  font-size: 24px;
-  margin: 40px 0px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  height: 50px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .account-left {
-  width: 400px;
-  padding-left: 60px;
+  width: 120px;
+  font-weight: bold;
+  color: #555;
 }
 
 .account-content {
-  width: 400px;
+  width: 200px;
+  color: #333;
 }
 
 .account-right {
-  width: 400px;
+  width: 330px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.account-right span {
+  cursor: pointer;
+  color: #1890ff;
+  transition: color 0.3s;
+}
+.account-right span:hover {
+  color: #40a9ff;
+}
+.account-right .anticon {
+  margin-right: 5px;
+}
+.account-right .edit-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.account-right .edit-form input {
+  width: 150px;
+  padding: 8px 10px;
+  margin-right: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 14px;
+}
+.account-right .edit-form input:focus {
+  border-color: #40a9ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.account-right .edit-form button {
+  padding: 8px 15px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.account-right .edit-form button:hover {
+  background-color: #40a9ff;
+}
+
+.personal-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=Account.css.map */

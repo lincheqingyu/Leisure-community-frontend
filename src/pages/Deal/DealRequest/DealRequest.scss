@@ -2,57 +2,84 @@
   width: 100%;
 }
 
-.app {
-  width: 60%;
+.deal-content {
+  width: 85%;
   margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reply-wrap {
-  position: relative;
-}
-
-.bili-avatar {
-  position: relative;
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.bili-avatar-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border: none;
-  border-radius: 50%;
-  image-rendering: -webkit-optimize-contrast;
-  transform: translate(-50%, -50%);
-}
-
-.user-name {
-  font-size: large;
+  padding: 20px;
 }
 
 .reply-item {
-  padding: 22px 0 0 80px;
+  display: flex;
+  align-items: flex-start;
 }
 
-.reply-none {
-  height: 64px;
-  margin-bottom: 80px;
-  color: #99a2aa;
-  font-size: 13px;
-  line-height: 64px;
-  text-align: center;
+.root-reply-avatar {
+  margin-right: 20px;
+}
+
+.bili-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bili-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reply-time {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.reply-content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .reply-HL {
   color: #5f9cf5;
-  font-size: larger;
+  font-weight: bold;
+}
+
+.reply-img {
+  margin-top: 10px;
+  
+  .replyImg {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+}
+
+.reply-info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #999;
+}
+
+.delete-btn {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
 }

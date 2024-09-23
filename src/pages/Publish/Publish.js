@@ -54,7 +54,6 @@ const Publish = () => {
                 placeholder='请输入主题'
                 value={topic}
                 onChange={handleTopicChange}
-                style={{ width: '100%' }}
               />
             </div>
             <div className='publish-options'>

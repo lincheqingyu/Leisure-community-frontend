@@ -2,104 +2,146 @@
 .publish-all {
   /*整体*/
   background-color: #f5f5f5;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .publish-main {
+  flex: 1;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .publish-container {
   /*发布框*/
   background-color: white;
-  width: 60%;
-  height: 600px;
-  margin-top: 100px;
+  width: 80%;
+  max-width: 1000px;
+  min-height: 600px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .publish-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 .header-left {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .publish-title {
   /*主题样式*/
-  font-size: 28px;
-  margin-left: 40px;
-  margin-top: 40px;
+  font-size: 24px;
+  margin-right: 20px;
+  white-space: nowrap;
 }
 
-.publish-header input {
-  /*主题输入框*/
-  width: 600px;
-  height: 50px;
-  margin-top: 30px;
+.header-left input {
+  flex: 1;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.header-left input:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  outline: none;
 }
 
 .publish-options {
   /* 出闲置、求闲置 */
   display: flex;
-  margin-top: 30px;
+  align-items: center;
+  margin-left: 20px;
   height: 50px;
 }
 
 .publish-options button {
-  margin-right: 40px; /* 调整按钮之间的间距 */
-  background-color: #cccccc; /* 默认按钮颜色 */
-  color: white; /* 默认文字颜色 */
+  margin-right: 10px;
+  padding: 0 15px;
+  height: 40px;
+  background-color: #cccccc;
+  color: white;
   border: none;
-  cursor: pointer; /*变光标*/
-  letter-spacing: 8px;
-  border-radius: 10px;
-  width: 90px;
+  cursor: pointer;
+  letter-spacing: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
 }
-
+.publish-options button:last-child {
+  margin-right: 0;
+}
 .publish-options button.selected {
-  background-color: #3688ff; /* 选中按钮的颜色 */
+  background-color: #3688ff;
+}
+.publish-options button:hover {
+  opacity: 0.8;
 }
 
 .publish-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
+  padding: 20px;
 }
 
 .publish-content textarea {
   /*正文输入框*/
-  width: 90%;
-  height: 250px;
-  margin-bottom: 10px;
+  width: 100%;
+  flex: 1;
+  min-height: 200px;
+  margin-bottom: 20px;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.publish-content textarea:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  outline: none;
 }
 
 .publish-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .publish-button {
   display: flex;
-  height: 50px;
+  height: 40px;
   width: 100px;
   background-color: #3688ff; /* 默认按钮颜色 */
   color: white; /* 默认文字颜色 */
   border: none;
   cursor: pointer; /*变光标*/
-  letter-spacing: 16px;
-  border-radius: 10px;
-  margin-top: 120px;
-  margin-right: 60px;
-  font-size: 28px;
-  padding-left: 12px;
-  padding-top: 8px;
+  letter-spacing: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
 }
 
 .file-upload-container {
@@ -109,23 +151,35 @@
 
 .file-input-label {
   display: inline-block;
-  width: 150px; /* 调整按钮宽度 */
-  height: 150px; /* 调整按钮高度 */
+  width: 100px; /* 调整按钮宽度 */
+  height: 100px; /* 调整按钮高度 */
   background-color: #d9d9d9; /* 设置按钮背景颜色 */
   color: #b0b1b2; /* 设置按钮文本颜色 */
-  font-size: 100px;
+  font-size: 60px;
   text-align: center;
   padding-top: 5px;
   cursor: pointer;
   border-radius: 10%;
-  margin-left: 60px;
-  margin-top: 20px;
+  margin-left: 0; /* 移除左边距 */
+  margin-top: 0; /* 移除顶部边距 */
   border: 1px solid #b0b1b2;
 }
 
 /* 当文件选择后，隐藏默认的文件选择按钮 */
 #file-input {
   display: none;
+}
+
+.image-preview {
+  max-width: 100px;
+  max-height: 100px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=Publish.css.map */

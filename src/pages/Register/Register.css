@@ -67,10 +67,6 @@
   justify-content: space-between; /* 将子元素分散对齐 */
 }
 
-.button {
-  margin-left: 10px;
-}
-
 .text-content {
   padding-bottom: 5%;
 }

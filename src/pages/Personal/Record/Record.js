@@ -39,6 +39,7 @@ const Record = () => {
   return (
     <div className='record-all'>
       <div className='main-content'>
+        <p>交易记录</p>
         <List
           itemLayout="horizontal"
           dataSource={records}
